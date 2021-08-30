@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- search city weather -->
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="user-input" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button onclick="userInput()" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        <!-- loading spinner -->
+        <div id="spiner" class="spinner-border mx-auto text-white" role="status">
+            <span class="visually-hidden"></span>
+          </div>
+        <!-- eroor massger showing -->
+        <div id="error" class="text-white bg-danger text-center w-50 mx-auto">
+
+        </div>
+        <div id="error-2" class="text-white bg-danger text-center w-50 mx-auto">
+
+        </div>
+        <!-- dispaly weather information -->
+        <div class="weather-status text-white text-center mt-5">
+            <div id="icon"></div>
+            <h1 id="city-name">City</h1>
+            <h3><span id="degreeCelcious">Temperature</span>&deg;C</h3>
+            <h1 class="lead" id="clouds">Weather</h1>
+        </div>
+    </div>
+<script src="js/weather.js"></script>
+</body>
+
+</html>
